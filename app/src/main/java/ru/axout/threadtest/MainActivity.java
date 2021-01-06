@@ -27,9 +27,14 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         // получаем текущее время
-                        String currentTime = getFormatDate();
+                        final String currentTime = getFormatDate();
                         // отображаем в текстовом поле
-                        textView.setText(currentTime);
+                        textView.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                textView.setText(currentTime);
+                            }
+                        });
                     }
                 };
                 // определяем новый поток
