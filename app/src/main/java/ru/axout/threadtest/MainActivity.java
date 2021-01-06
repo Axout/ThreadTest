@@ -45,10 +45,10 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    // Форматирование даты под следующий вид: "dd.MM.yyyy"
+    // Форматирование даты под следующий вид: "hh:mm:ss"
     private String getFormatDate() {
         Date dateNow = new Date();
-        SimpleDateFormat formatForDateNow = new SimpleDateFormat("dd.MM.yyyy");
+        SimpleDateFormat formatForDateNow = new SimpleDateFormat("hh:mm:ss");
         return formatForDateNow.format(dateNow);
     }
 }
